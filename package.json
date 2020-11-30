@@ -1,0 +1,25 @@
+{
+  "name": "Todo",
+  "version": "1.0.0",
+  "description": "a JavaScript project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Guy-Gustave/Todo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Guy-Gustave/Todo/issues"
+  },
+  "homepage": "https://github.com/Guy-Gustave/Todo#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "webpack": "^5.9.0",
+    "webpack-cli": "^4.2.0"
+  }
+}
