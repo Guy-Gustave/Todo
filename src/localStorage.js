@@ -31,3 +31,5 @@ export class Storage {
   }
 
 }
+
+export { Storage }

@@ -51,7 +51,6 @@ const renderAddTodo = () => {
       createAddTodoDisplay();
       limitDueDate();
   })
-
 }
 
 export { renderAddTodo} 
