@@ -8,19 +8,23 @@ body{
 
 main{
   display: flex;
+  flex-direction: column;
 }
 
 /* Project sections */
 .project-display-container {
-  width: 30%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
   padding: 40px;
-  height: 100vh;
-  border-right: 3px solid #000;
-  background-color: #8ac2e3;
+  height: 20vh;
+  background-image: linear-gradient(rgb(228, 243, 22), #aaf0b9);
 }
 
 .project-add-container {
   margin: 50px 0 30px 0;
+  width: 50%;
 }
 
 .project-container{
@@ -37,12 +41,13 @@ main{
 
 .project-add-input {
   width: 70%;
-  height: 20px;
+  height: 33px;
+  border-radius: 5px;
 }
 
 .project-add-btn {
   cursor: pointer;
-  background-color: #fff;
+  background-color: rgb(77, 172, 22);
   border: none;
   padding: 5px 10px;
   margin: 10px 0;
@@ -61,7 +66,7 @@ main{
   bottom: 40px;
   width: 50px;
   height: 50px;
-  background-color: #fff;
+  background-color: rgb(27, 168, 46);
   border: 1px solid #000;
   border-radius: 50%;
   cursor: pointer;
@@ -71,7 +76,7 @@ main{
 
 .add-container {
   padding: 15px;
-  border: 1px solid #000;
+  background: crimson;
 }
 /* todo section */
 
@@ -96,7 +101,7 @@ main{
 }
 
 .todo-container > button {
-  width: 80px;
+  width: 100px;
 }
 
 .finish-btn {
@@ -118,9 +123,10 @@ main{
 
 /* popup display section */
 .popup-display-container {
-  width: 40%;
-  height: 100%;
-  margin: 80px 20px;
+  position: absolute;
+  width: 30%;
+  height: 55%;
+  margin: 20rem 40rem;
 }
 
 /* Toggle */
@@ -133,7 +139,7 @@ main{
   justify-content: center;
   align-items: center;
   background-color: #fff;
-  border: 5px solid red;
+  border: 2px solid rgb(16, 122, 31);
   cursor: pointer;
   position: relative;
   left: 220px;

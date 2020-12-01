@@ -1,10 +1,6 @@
-import { Storage } from './localStorage.js';
-import {
-  createAddTodoDisplay,
-  closeAddTodo,
-  formValidation,
-} from './add-todo.js';
-import { showTodos } from './show-todos.js';
+import { Storage } from './storage.js';
+import { createAddTodoDisplay, closeAddTodo, formValidation } from './add-todo.js';
+import { showTodos } from './displayTodos.js';
 
 class Todo {
   constructor(title, due, priority) {
@@ -47,7 +43,7 @@ class TodoDOMElement {
     this.priorityDiv.textContent = priority;
     this.titleDiv.textContent = title;
     this.dueDiv.textContent = due;
-    this.checkButton.textContent = 'Check';
+    this.checkButton.textContent = 'Complete';
     this.modifyButton.textContent = 'Modify';
     this.deleteButton.textContent = 'Delete';
 

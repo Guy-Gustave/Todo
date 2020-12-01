@@ -1,10 +1,9 @@
-import { Storage } from './localStorage.js';
-import { Project, ProjectDOMElement } from './projectClass.js';
-import { showTodosInClickedProject } from './show-todos.js';
+import { Storage } from './storage.js';
+import { Project, ProjectDOMElement } from './projectDom.js';
+import { showTodosInClickedProject } from './displayTodos.js';
 
 const projectAddFormEl = document.getElementById('project-add-form');
 
-// check if there is duplicated project title in localStorage.
 const validation = (el) => {
   const projects = Storage.getProjects();
   if (!el) return;
@@ -16,7 +15,6 @@ const validation = (el) => {
   return index;
 };
 
-//Add new project to Localstorage and display
 const addProject = () => {
   const projectDisplay = document.querySelector('.project-display-container');
   const projectAddInput = document.getElementById('project-add').value.trim();
@@ -24,10 +22,8 @@ const addProject = () => {
   if (validation(projectAddInput) === -1) {
     const numberOfProjects = Storage.getProjects().length;
 
-    // instantiate and save to LocalStorage
-    const project = new ClassProject(projectAddInput);
+    const project = new Project(projectAddInput);
 
-    // create elements for new project
     const div = new ProjectDOMElement(projectAddInput, numberOfProjects);
 
     Storage.saveProject(project);
@@ -39,7 +35,6 @@ const addProject = () => {
   }
 };
 
-// EventListener for Add new project form
 const projectDisplayListener = () => {
   projectAddFormEl.addEventListener('submit', (e) => {
     e.preventDefault();

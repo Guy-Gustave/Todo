@@ -1,8 +1,8 @@
 import { renderAddTodo } from './add-todo.js';
-import { projectDisplayListener } from './pLogic.js';
-import { showProjects } from './show-project.js';
-import { showTodos, showTodosInClickedProject } from './show-todos.js';
-import { Storage } from './localStorage.js';
+import { projectDisplayListener } from './functions.js';
+import { showProjects } from './displayProjects.js';
+import { showTodos, showTodosInClickedProject } from './displayTodos.js';
+import { Storage } from './storage.js';
 
 const todoApp = (() => {
   Storage.getProjects();

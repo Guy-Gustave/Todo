@@ -1,5 +1,5 @@
-import { Storage } from './localStorage.js';
-import { TodoDOMElement } from './todo-class.js';
+import { Storage } from './storage.js';
+import { TodoDOMElement } from './classDom.js';
 const todosContainer = document.querySelector('.todos-container');
 
 const showTodos = (index = 0) => {
@@ -25,7 +25,6 @@ const showTodos = (index = 0) => {
   }
 };
 
-// When project is clicked, display its todos
 const showTodosInClickedProject = () => {
   const projectsTitleEl = document.querySelectorAll('.project-title');
 
@@ -41,7 +40,6 @@ const showTodosInClickedProject = () => {
   });
 };
 
-// Add current class to project for reference
 const projectReference = (target) => {
   const projectContainerEls = document.querySelectorAll('.project-container');
   projectContainerEls.forEach((el) => el.classList.remove('current'));
