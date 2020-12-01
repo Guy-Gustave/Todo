@@ -1,24 +1,22 @@
 
 body{
   box-sizing: border-box;
-  background-color: #ced8d0;
+  background-color: #aaf0b9;
   font-size: 1.3rem;
   margin: 0;
 }
 
-.main-container {
+main{
   display: flex;
-  justify-content: space-around;
 }
 
 /* Project sections */
 .project-display-container {
+  width: 30%;
   padding: 40px;
   height: 100vh;
-  width: 30%;
-  border-right: 3px solid rgb(136, 126, 126);
-  background-color: #49815f;
-  margin-left: 10rem;
+  border-right: 3px solid #000;
+  background-color: #8ac2e3;
 }
 
 .project-add-container {
@@ -28,11 +26,13 @@ body{
 .project-container{
   display: flex;
   align-items: center;
-  margin: 0 10px;
+  margin: 15px 0;
+  padding: 10px 0;
 }
 
 .project-title{
-  margin-right: 20px;
+  margin: 0 20px;
+  cursor: pointer;
 }
 
 .project-add-input {
@@ -45,8 +45,12 @@ body{
   background-color: #fff;
   border: none;
   padding: 5px 10px;
-  margin: 10px 80px;
+  margin: 10px 0;
   font-size: 1.3rem;
+}
+
+.current {
+  border-bottom: 2px solid #fff;
 }
 
 /* Todo Add button */
@@ -65,30 +69,62 @@ body{
   font-size: 45px;
 }
 
+.add-container {
+  padding: 15px;
+  border: 1px solid #000;
+}
+/* todo section */
 
 .todo-display-container{
-  padding: 40px 80px;
+  padding: 50px;
   width: 100%;
 }
 
 .todo-container{
   display: flex;
   align-items: center;
+  margin: 18px 0;
+  width: 100%;
 }
 
 .todo-container > div {
-  margin: 0 20px;
-}
-.todo-container > button {
-  justify-content: flex-end;
-  margin: 0 5px;
+  margin: 0 10px;
 }
 
+.priority-display {
+  margin: 0 10px 0 5px;
+}
+
+.todo-container > button {
+  width: 80px;
+}
+
+.finish-btn {
+  margin-left: 3rem;
+}
+
+.done {
+  text-decoration: line-through;
+}
+
+.btn {
+  font-size: 1.2rem;
+  padding: 5px 10px;
+  margin: 0 5px;
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+/* popup display section */
 .popup-display-container {
   width: 40%;
   height: 100%;
   margin: 80px 20px;
 }
+
+/* Toggle */
+
 
 .close-btn {
   display: flex;
@@ -122,9 +158,4 @@ body{
   margin-top: 30px;
   padding: 10px 15px;
   font-size: 1.3rem;
-}
-
-.slide-show {
-  transition: 1s ease-out;
-  overflow:hidden;
 }

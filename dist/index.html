@@ -8,22 +8,36 @@
   </head>
 
   <body>
-    <div class="main-container">
+    <main>
       <div class="project-display-container">
         <h1>Project List</h1>
-        <form id="project-add-form">
-          <label for="project-add"></label>
-          <input
-            type="text"
-            class="project-add-input"
-            id="project-add"
-            name="project-add"
-          />
-          <button class="project-add-btn">Add Project</button>
-        </form>
+        <div class="project-add-container">
+          <form id="project-add-form">
+            <label for="project-add"></label>
+            <input
+              type="text"
+              class="project-add-input"
+              id="project-add"
+              name="project-add"
+            />
+            <button class="project-add-btn">Add Project</button>
+          </form>
+        </div>
+
+        <!-- <div class="project-container">
+                <h3 class="project-title">Default</h3>
+                <button class="btn project-delet-btn">Delet</button>
+            </div> -->
+      </div>
+
+      <!-- Todo display here -->
+      <div class="todo-display-container">
+        <h2>Todo List</h2>
+        <div class="add-todo-btn">+</div>
+        <div class="todos-container"></div>
       </div>
       <div class="popup-display-container"></div>
-    </div>
+    </main>
     <script src="/main.js"></script>
   </body>
 </html>

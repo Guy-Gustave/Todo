@@ -1,4 +1,5 @@
 import { Storage } from './localStorage.js'
+import { ProjectDOMElement } from './projectClass.js'
 
 const showProjects = () => {
   const projectDisplay = document.querySelector('.project-display-container');

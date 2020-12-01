@@ -1,6 +1,6 @@
 import { Storage } from './localStorage.js'
 
-class classProject {
+class ClassProject {
   constructor(title, todos = []) {
     this.title = title,
       this.todos = todos
@@ -57,4 +57,4 @@ class ProjectDOMElement {
   }
 }
 
-export { classProject, ProjectDOMElement }
+export { ClassProject, ProjectDOMElement }

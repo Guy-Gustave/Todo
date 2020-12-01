@@ -1,46 +1,50 @@
-import { Storage } from './localStorage.js'
-import { ProjectDOMElement } from './projectClass.js'
+import { Storage } from './localStorage.js';
+import { Project, ProjectDOMElement } from './projectClass.js';
+import { showTodosInClickedProject } from './show-todos.js';
 
 const projectAddFormEl = document.getElementById('project-add-form');
-// const storage = new Storage()
 
+// check if there is duplicated project title in localStorage.
 const validation = (el) => {
-  let projects = Storage.getProjects();
+  const projects = Storage.getProjects();
+  if (!el) return;
 
-  let index = projects.findIndex((project) => {
-    return project.title === el
-  })
+  const index = projects.findIndex((project) => {
+    return project.title === el;
+  });
 
-  return index
-}
+  return index;
+};
 
-//Add project to Localstorage
+//Add new project to Localstorage and display
 const addProject = () => {
   const projectDisplay = document.querySelector('.project-display-container');
-  const projectAddInput = document.getElementById('project-add').value;
+  const projectAddInput = document.getElementById('project-add').value.trim();
 
-  // check if there is duplicate
-  console.log(validation(projectAddInput))
   if (validation(projectAddInput) === -1) {
-    let numberOfProjects = Storage.getProjects().length;
+    const numberOfProjects = Storage.getProjects().length;
+
     // instantiate and save to LocalStorage
-    let project = new classProject(projectAddInput);
+    const project = new ClassProject(projectAddInput);
+
     // create elements for new project
-    let div = new ProjectDOMElement(projectAddInput, numberOfProjects+1);
+    const div = new ProjectDOMElement(projectAddInput, numberOfProjects);
 
     Storage.saveProject(project);
-    projectDisplay.appendChild(div.div)
-    console.log(project)
+    projectDisplay.appendChild(div.div);
+    showTodosInClickedProject();
+    document.getElementById('project-add').value = '';
   } else {
-    console.log('Duplicate Project')
+    console.log('Duplicate Project');
   }
-}
+};
 
+// EventListener for Add new project form
 const projectDisplayListener = () => {
   projectAddFormEl.addEventListener('submit', (e) => {
     e.preventDefault();
     addProject();
   });
-}
+};
 
-export { projectDisplayListener } 
+export { projectDisplayListener };
