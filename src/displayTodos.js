@@ -1,20 +1,22 @@
-import { Storage } from './storage.js';
-import { TodoDOMElement } from './classDom.js';
+/* eslint-disable */
+import { Storage } from './storage';
+import { TodoDOMElement } from './classDom';
+
 const todosContainer = document.querySelector('.todos-container');
 
 const showTodos = (index = 0) => {
-  let todos = Storage.getTodos(index);
+  const todos = Storage.getTodos(index);
   todosContainer.innerHTML = '';
   projectReference(index);
 
   if (todos.length > 0) {
     todos.forEach((todo, todoIndex) => {
-      let todoEl = new TodoDOMElement(
+      const todoEl = new TodoDOMElement(
         todo.title,
         todo.due,
         todo.priority,
         todoIndex,
-        todo.done
+        todo.done,
       );
       todosContainer.appendChild(todoEl.div);
     });
@@ -32,7 +34,7 @@ const showTodosInClickedProject = () => {
     project.addEventListener('click', () => {
       const projectIndex = project.parentElement.getAttribute('data-index');
 
-      if (projectIndex != -1) {
+      if (projectIndex !== -1) {
         projectReference(projectIndex);
         showTodos(projectIndex);
       }

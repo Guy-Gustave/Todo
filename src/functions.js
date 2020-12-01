@@ -1,6 +1,7 @@
-import { Storage } from './storage.js';
-import { Project, ProjectDOMElement } from './projectDom.js';
-import { showTodosInClickedProject } from './displayTodos.js';
+/* eslint-disable */
+import { Storage } from './storage';
+import { Project, ProjectDOMElement } from './projectDom';
+import { showTodosInClickedProject } from './displayTodos';
 
 const projectAddFormEl = document.getElementById('project-add-form');
 
@@ -8,9 +9,7 @@ const validation = (el) => {
   const projects = Storage.getProjects();
   if (!el) return;
 
-  const index = projects.findIndex((project) => {
-    return project.title === el;
-  });
+  const index = projects.findIndex((project) => project.title === el);
 
   return index;
 };

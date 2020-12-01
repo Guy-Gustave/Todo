@@ -1,3 +1,4 @@
+/* eslint-disable */
 class Storage {
   static getProjects() {
     let projects = [
@@ -28,9 +29,7 @@ class Storage {
     const projects = JSON.parse(localStorage.getItem('todoApp'));
     const todoContainerEl = document.querySelector('.todos-container');
 
-    const index = projects.findIndex((el) => {
-      return el.title == target;
-    });
+    const index = projects.findIndex((el) => el.title === target);
 
     projects.splice(index, 1);
     localStorage.setItem('todoApp', JSON.stringify(projects));

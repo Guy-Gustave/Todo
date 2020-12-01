@@ -1,8 +1,9 @@
-import { renderAddTodo } from './add-todo.js';
-import { projectDisplayListener } from './functions.js';
-import { showProjects } from './displayProjects.js';
-import { showTodos, showTodosInClickedProject } from './displayTodos.js';
-import { Storage } from './storage.js';
+/* eslint-disable */
+import { renderAddTodo } from './add-todo';
+import { projectDisplayListener } from './functions';
+import { showProjects } from './displayProjects';
+import { showTodos, showTodosInClickedProject } from './displayTodos';
+import { Storage } from './storage';
 
 const todoApp = (() => {
   Storage.getProjects();

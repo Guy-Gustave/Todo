@@ -1,6 +1,23 @@
-import { Storage } from './storage.js';
-import { Todo } from './classDom.js';
-import { showTodos } from './displayTodos.js';
+/* eslint-disable */
+import { Storage } from './storage';
+import { Todo } from './classDom';
+import { showTodos } from './displayTodos';
+
+const limitDueDate = () => {
+  let today = new Date();
+  let dd = today.getDate();
+  let mm = today.getMonth() + 1;
+  const yyyy = today.getFullYear();
+  if (dd < 10) {
+    dd = `0${dd}`;
+  }
+  if (mm < 10) {
+    mm = `0${mm}`;
+  }
+
+  today = `${yyyy}-${mm}-${dd}`;
+  document.getElementById('date').setAttribute('min', today);
+};
 
 const createAddTodoDisplay = () => {
   const popupDisplayEl = document.querySelector('.popup-display-container');
@@ -36,22 +53,6 @@ const createAddTodoDisplay = () => {
   limitDueDate();
 };
 
-const limitDueDate = () => {
-  let today = new Date();
-  let dd = today.getDate();
-  let mm = today.getMonth() + 1;
-  let yyyy = today.getFullYear();
-  if (dd < 10) {
-    dd = '0' + dd;
-  }
-  if (mm < 10) {
-    mm = '0' + mm;
-  }
-
-  today = yyyy + '-' + mm + '-' + dd;
-  document.getElementById('date').setAttribute('min', today);
-};
-
 const createNewTodo = () => {
   const formEl = document.querySelector('.input-form');
   const titleInputEl = document.getElementById('title');
@@ -74,7 +75,7 @@ const createNewTodo = () => {
       const todo = new Todo(
         titleInputEl.value.trim(),
         dueInputEl.value,
-        priorityInputeEl.value
+        priorityInputeEl.value,
       );
 
       Storage.saveTodo(todo, index);
@@ -89,9 +90,8 @@ const formValidation = () => {
 
   if (titleInputEl.value.trim()) {
     return true;
-  } else {
-    return false;
   }
+  return false;
 };
 
 const closeAddTodo = () => {
@@ -113,4 +113,6 @@ const renderAddTodo = () => {
   });
 };
 
-export { renderAddTodo, createAddTodoDisplay, closeAddTodo, formValidation };
+export {
+  renderAddTodo, createAddTodoDisplay, closeAddTodo, formValidation,
+};

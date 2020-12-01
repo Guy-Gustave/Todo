@@ -1,6 +1,7 @@
-import { Storage } from './storage.js';
-import { createAddTodoDisplay, closeAddTodo, formValidation } from './add-todo.js';
-import { showTodos } from './displayTodos.js';
+/* eslint-disable */
+import { Storage } from './storage';
+import { createAddTodoDisplay, closeAddTodo, formValidation } from './add-todo';
+import { showTodos } from './displayTodos';
 
 class Todo {
   constructor(title, due, priority) {

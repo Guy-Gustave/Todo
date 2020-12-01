@@ -1,4 +1,5 @@
-import { Storage } from './storage.js';
+/* eslint-disable */
+import { Storage } from './storage';
 
 class Project {
   constructor(title, todos = []) {
