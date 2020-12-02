@@ -4,7 +4,9 @@
   "description": "a JavaScript project",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production",
+    "start": "webpack-dev-server --mode development --open"
   },
   "repository": {
     "type": "git",
@@ -17,7 +19,9 @@
     "url": "https://github.com/Guy-Gustave/Todo/issues"
   },
   "homepage": "https://github.com/Guy-Gustave/Todo#readme",
-  "dependencies": {},
+  "dependencies": {
+    "webpack-dev-server": "^3.11.0"
+  },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
     "eslint": "^6.8.0",

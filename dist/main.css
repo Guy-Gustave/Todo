@@ -54,6 +54,8 @@ main{
   font-size: 1.3rem;
 }
 
+
+
 .current {
   border-bottom: 2px solid #fff;
 }
@@ -67,12 +69,13 @@ main{
   width: 50px;
   height: 50px;
   background-color: rgb(27, 168, 46);
-  border: 1px solid #000;
   border-radius: 50%;
   cursor: pointer;
   text-align: center;
   font-size: 45px;
 }
+
+
 
 .add-container {
   padding: 15px;
@@ -121,6 +124,7 @@ main{
   cursor: pointer;
 }
 
+
 /* popup display section */
 .popup-display-container {
   position: absolute;
@@ -164,4 +168,20 @@ main{
   margin-top: 30px;
   padding: 10px 15px;
   font-size: 1.3rem;
+}
+
+.close-btn:hover {
+  background-color: rgb(220, 217, 20);
+}
+
+.btn:hover {
+  background-color: rgb(220, 217, 20);
+}
+
+.add-todo-btn:hover {
+  background-color: rgb(220, 217, 20);
+}
+
+.project-add-btn:hover {
+  background-color: rgb(220, 217, 20);
 }
