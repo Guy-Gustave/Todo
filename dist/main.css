@@ -1,0 +1,187 @@
+
+body{
+  box-sizing: border-box;
+  background-color: #aaf0b9;
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+main{
+  display: flex;
+  flex-direction: column;
+}
+
+/* Project sections */
+.project-display-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 40px;
+  height: 20vh;
+  background-image: linear-gradient(rgb(228, 243, 22), #aaf0b9);
+}
+
+.project-add-container {
+  margin: 50px 0 30px 0;
+  width: 50%;
+}
+
+.project-container{
+  display: flex;
+  align-items: center;
+  margin: 15px 0;
+  padding: 10px 0;
+}
+
+.project-title{
+  margin: 0 20px;
+  cursor: pointer;
+}
+
+.project-add-input {
+  width: 70%;
+  height: 33px;
+  border-radius: 5px;
+}
+
+.project-add-btn {
+  cursor: pointer;
+  background-color: rgb(77, 172, 22);
+  border: none;
+  padding: 5px 10px;
+  margin: 10px 0;
+  font-size: 1.3rem;
+}
+
+
+
+.current {
+  border-bottom: 2px solid #fff;
+}
+
+/* Todo Add button */
+
+.add-todo-btn {
+  position: relative;
+  left: 500px;
+  bottom: 40px;
+  width: 50px;
+  height: 50px;
+  background-color: rgb(27, 168, 46);
+  border-radius: 50%;
+  cursor: pointer;
+  text-align: center;
+  font-size: 45px;
+}
+
+
+
+.add-container {
+  padding: 15px;
+  background: crimson;
+}
+/* todo section */
+
+.todo-display-container{
+  padding: 50px;
+  width: 100%;
+}
+
+.todo-container{
+  display: flex;
+  align-items: center;
+  margin: 18px 0;
+  width: 100%;
+}
+
+.todo-container > div {
+  margin: 0 10px;
+}
+
+.priority-display {
+  margin: 0 10px 0 5px;
+}
+
+.todo-container > button {
+  width: 100px;
+}
+
+.finish-btn {
+  margin-left: 3rem;
+}
+
+.done {
+  text-decoration: line-through;
+}
+
+.btn {
+  font-size: 1.2rem;
+  padding: 5px 10px;
+  margin: 0 5px;
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+
+/* popup display section */
+.popup-display-container {
+  position: absolute;
+  width: 30%;
+  height: 55%;
+  margin: 20rem 40rem;
+}
+
+/* Toggle */
+
+
+.close-btn {
+  display: flex;
+  width: 30px;
+  height: 30px;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border: 2px solid rgb(16, 122, 31);
+  cursor: pointer;
+  position: relative;
+  left: 220px;
+  bottom: 65px;
+}
+
+.input-container {
+  margin: 10px 0;
+  font-size: 1.4rem;
+}
+
+.input {
+  width: 100%;
+  font-size: 1.2rem;
+  padding: 10px 0 10px 5px;
+}
+
+.add-btn{
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+  margin-top: 30px;
+  padding: 10px 15px;
+  font-size: 1.3rem;
+}
+
+.close-btn:hover {
+  background-color: rgb(220, 217, 20);
+}
+
+.btn:hover {
+  background-color: rgb(220, 217, 20);
+}
+
+.add-todo-btn:hover {
+  background-color: rgb(220, 217, 20);
+}
+
+.project-add-btn:hover {
+  background-color: rgb(220, 217, 20);
+}
