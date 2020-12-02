@@ -1,6 +1,7 @@
 /* eslint-disable */
 import { Storage } from './storage';
 import { TodoDOMElement } from './classDom';
+import { ProjectDOMElement } from './projectDom'; 
 
 const todosContainer = document.querySelector('.todos-container');
 
@@ -11,12 +12,13 @@ const showTodos = (index = 0) => {
 
   if (todos.length > 0) {
     todos.forEach((todo, todoIndex) => {
+      const {title, due, priority, done} = todo
       const todoEl = new TodoDOMElement(
-        todo.title,
-        todo.due,
-        todo.priority,
+        title,
+        due,
+        priority,
         todoIndex,
-        todo.done,
+        done,
       );
       todosContainer.appendChild(todoEl.div);
     });
@@ -48,4 +50,15 @@ const projectReference = (target) => {
   projectContainerEls[target].classList.add('current');
 };
 
-export { showTodos, showTodosInClickedProject };
+const showProjects = () => {
+  const projectDisplay = document.querySelector('.project-display-container');
+  const project = Storage.getProjects();
+
+  project.forEach((element, index) => {
+    const project = new ProjectDOMElement(element.title, index);
+
+    projectDisplay.appendChild(project.div);
+  });
+};
+
+export { showTodos, showTodosInClickedProject, showProjects };
