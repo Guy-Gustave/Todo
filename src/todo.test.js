@@ -1,6 +1,7 @@
-const sum = require('./sum');
 import { Project } from './projectDom';
-import { Todo } from './classDom'
+import { Todo } from './classDom';
+
+const sum = require('./sum');
 
 test('adds 1 + 2 to equal 3', () => {
   expect(sum(1, 2)).toBe(3);
@@ -14,7 +15,7 @@ test('It creates new project', () => {
 test('It creates new todo', () => {
   const newAddTodo = new Todo('title-test', Date.now(), 'high');
   expect(newAddTodo.title).toBe('title-test');
-  expect(newAddTodo.priority).toBe('high');  
+  expect(newAddTodo.priority).toBe('high');
 });
 
 test('It could not create empty project', () => {
@@ -24,5 +25,5 @@ test('It could not create empty project', () => {
 
 test('It could not create empty title todo', () => {
   const newtodo = new Todo('', Date.now, 'low');
-  expect(newtodo.title).not.toBe('Test-title', Date.now, 'low' );
+  expect(newtodo.title).not.toBe('Test-title', Date.now, 'low');
 });
