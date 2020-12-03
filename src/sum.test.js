@@ -17,15 +17,12 @@ test('It creates new todo', () => {
   expect(newAddTodo.priority).toBe('high');  
 });
 
-// test('It creates a new To-Do', () => {
-//   const newAddToDo = new AddToDo('test title', 'test desc', Date.now(), 2, true);
-//   expect(newAddToDo.title).toBe('test title');
-//   expect(newAddToDo.description).toBe('test desc');
-// });
+test('It could not create empty project', () => {
+  const newProject = new Project('');
+  expect(newProject.title).not.toBe('Test project title');
+});
 
-// test('It appends the todo to Project', () => {
-//   const newAddToProject = new AddToProject('Test project title', 'Test project desc');
-//   const newAddToDo = new AddToDo('test title', 'test desc', Date.now(), 2, true);
-//   newAddToProject.toDoList.push(newAddToDo);
-//   expect(newAddToProject.toDoList.length).toEqual(1);
-// });
+test('It could not create empty title todo', () => {
+  const newtodo = new Todo('', Date.now, 'low');
+  expect(newtodo.title).not.toBe('Test-title', Date.now, 'low' );
+});
